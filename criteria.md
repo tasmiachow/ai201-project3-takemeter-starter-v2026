@@ -51,61 +51,61 @@ whether you hit them:
 
 ---
 
-## 1.
+## 1. Overall Accuracy $\ge 0.65$
 
 <!-- Your criterion. It must name a number. -->
 
 
 
-**Why this target:**
+**Why this target:** Since a dummy model guessing only the majority class (feature_evaluation) gets 51.5% by default, hitting 65% accuracy proves the model is picking up meaningful signals across categories without setting an unrealistic bar for a small 200-review dataset.
 
 
 
 ---
 
-## 2.
+## 2. Minority Class (low_effort) Macro F1 => 0.50
 
 <!-- Your criterion. -->
 
 
 
-**Why this target:**
+**Why this target:** With only 39 examples of low_effort (~19.5% of the data), the model doesn't have many patterns to learn from. A target F1 of 0.50 keeps the expectation reasonable while ensuring the model doesn't completely fail at identifying low-substance reviews.
 
 
 
 ---
 
-## 3.
+## 3. Per-label minimum F1 >= 0.6 for Core Classes
 
 <!-- Your criterion. -->
 
 
 
-**Why this target:**
+**Why this target:** Because feature_evaluation (103 reviews) and personal_story (58 reviews) often overlap when users tell stories with slight hardware details, boundary confusion will happen. Aiming for an F1 of 0.60 across both core categories gives the model room for error while still proving it can separate subjective narratives from hard technical facts.
 
 
 
 ---
 
-## 4.
+## 4. Inter-Annotator Consistency (Cohen's Kappa >= 0.60) 
 
 <!-- Your criterion. -->
 
 
 
-**Why this target:**
+**Why this target:**Subjective edge cases (like distinguishing between subjective noise complaints and concrete specs) naturally cause disagreement. A Kappa score of 0.60 reflects moderate-to-substantial agreement, showing my boundary rules are clear enough to be reliable without requiring perfect human consensus.
 
 
 
 ---
 
-## 5.
+## 5. Confidence >= 0.70
 
 <!-- Your criterion. -->
 
 
 
-**Why this target:**
+**Why this target:** When the model is reasonably confident, it should be right at least 70% of the time. Lowering this threshold accounts for model uncertainty on nuanced text while still giving me a usable slice of automated predictions I can trust.
 
 
 
