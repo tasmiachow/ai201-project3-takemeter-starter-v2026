@@ -42,7 +42,7 @@
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
 
-
+This project analyzes e-commerce product reviews, specifically on Amazon, within the Tech and Furniture sectors to cut through online noise and surface genuine hardware insights. The classifier sorts incoming reviews into a rigorous three-tier framework: feature_evaluation for concrete technical parameters and structural tolerances, personal_story for lifestyle and setup narratives, and low_effort for shipping logistics and uninformative praise. By automating this pipeline, buyers and builders can instantly isolate actionable hardware intelligence without wading through generic sentiment or box-weight complaints.
 
 ---
 
@@ -54,35 +54,60 @@
      The decision rule is worth a point on its own and it's the thing most
      people leave out. Every taxonomy has a hardest boundary. Name yours. -->
 
-### `label_one`
+### feature_evaluation
 
-**Definition:**
+**Definition:** The review cites specific, verifiable technical parameters, structural tolerances, material properties, unadvertised physical constraints, or benchmark-backed performance.
 
-**Example 1:**
+**Example 1:** Super high quality look, it immediately elevated my apartment aesthetic. It was super easy to assemble all I used was an electric drill and a hammer (the hammer was only used once for the first part of the instructions) . Overall I built it in one hour and 20 mins. The instructions are super straightforward. 10/10... It fits 14 pairs of my shoes and I’m a size 7 1/2.
 >
 
-**Example 2:**
+**Example 2:**FINALLY figured out how to optimize a GPU, CPU, RAM, and now my gaming PC is bordering on professional gaming settings. Although it has overclocking capabilities, I haven’t even overclocked this bad boy. I read many reviews that said Gigabyte GPUs are extremely loud, but generally speaking, that’s not the case here. I rarely hear my GPU revving up to the point that it distracts from what I’m listening to. Everything about this GPU screams stability, including performance and thermals. The only issues I’ve had were because of a learning-curve. My first ever PC build and I’m very happy! Although, my wallet doesn’t feel that way. GPUs are not very budget-friendly.
+
+Warzone Specs:
+
+FPS: 350+ (average)
+FPS: 500ish (peak)
+FPS: 75ish (1% lows)
+I’ve limited to FPS to 240.
+Latency: 14 (peak)
+Latency: 4 (average)
+Temperature: 35ish (idle)
+Temperature: 75ish (under stress)
+Usage: 0% (idle)
+Usage: 95ish (under stress)
+
+The Adrenaline App makes for extreme customization. AMD won me over for sure! #TeamRed!
+2 people found this helpful
 >
 
-### `label_two`
+### personal_story
 
-**Definition:**
+**Definition:** The review centers on subjective user narratives, lifestyle context, personal setup baselines, qualitative impressions, or comparative statements based on individual preference rather than objective testing.
 
-**Example 1:**
+**Example 1:** A very beautiful piece, adds to your home decor instead of taking away from it with the normal tacky shoe racks. If you have small children it will definitely hold double the shoes!
 >
 
-**Example 2:**
+**Example 2:** This shoe cabinet looks magnificent in our small farm house. The shoes lying by the front door were driving me insane so it’s nice to have somewhere to put them now in order to save floor space. This cabinet was a breeze to build since the instructions were easy to follow. I will say that I messed up in the beginning and let the cabinet and so the bottom back support did crack the wood where the screws were since it’s thin, but that’s user error and not a manufacture error. Just know to be gentle while constructing this cabinet. It looks incredible and holds large shoe sizes which is great compared to some other ones I looked at. Terrific value for such a visually high-end product and it really adds character to our living room!!
 >
+
+
+### low_effort
+
+**Definition:** The review contains non-substantive or generic sentiment, relies on single-line transactional mentions, echoes advertised baseline features without evaluation, or focuses entirely on unboxing or courier shipping logistics.
+
+**Example 1:**: Looks really nice!
+
+**Example 2:** Looks really nice!
 
 ### The hardest boundary
 
-**Which two labels:**
+**Which two labels:** feature_evaluation vs. personal_story
 
 **The decision rule I used every time:**
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
 
-
+If a post details specific physical hardware behavior, structural component limits, or unadvertised mechanical defects during setup or use—even if framed within a personal build narrative—it is classified as feature_evaluation; if it relies solely on qualitative adjectives or personal frustration without naming concrete structural parameters, it is classified as personal_story.
 
 ---
 
@@ -91,19 +116,19 @@
 <!-- Where you collected from, how you labelled, your counts, and three hard
      cases. -->
 
-**Where the posts came from:**
+**Where the posts came from:** Amazon Reviews
 
 **How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
-Say so plainly — the disclosure is required, not penalised. -->
+Say so plainly — the disclosure is required, not penalised. --> I labeled them all myself. However I did ask AI to weigh in on some reviews, now looking back that was probably why the accuracy was so low.
 
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| feature_evaluation | 102| 51% |
+| personal_story | 59 | 29.5% |
+| low_effort | 39 | 19.5% |
+| **Total** | 200 | 100% |
 
 **Three hard cases**
 
@@ -111,25 +136,25 @@ Say so plainly — the disclosure is required, not penalised. -->
      been, and what you chose. These are worth more than the easy 190. -->
 
 **1.**
-> *The post:*
+> *The post:* I really love this keyboard it’s really cute and I like how the keys sound- just a little bit of click but not too loud. I noticed some bad reviews about the mouse but honestly I don’t mind the mouse
 >
-> *Could have been:*
+> *Could have been:* feature_evaluation or personal_story
 >
-> *I chose, because:*
+> *I chose, because:*I chose personal_story, because: Even though it mentions tactile attributes (key sound and mouse feel), it leans entirely on subjective lifestyle impressions and personal reassurance rather than testing concrete performance tolerances or technical parameters.
 
 **2.**
-> *The post:*
+> *The post:* The metal is very thin and once put together will work as indicated. It is very easily bent. The packaging was great and well cushioned. The doors were a little crooked and the magnets could perhaps be a little more powerful to hold closed. Other than that they are aesthetically well designed.
 >
-> *Could have been:*
+> *Could have been:* feature_evaluation or personal_story
 >
-> *I chose, because:*
+> *I chose, because:* I chose feature_evaluation, because: It details specific physical structural properties, material thickness, and component alignment flaws (feature_evaluation) rather than just offering a passing, uninformative shipping comment.
 
 **3.**
-> *The post:*
+> *The post:* As a mom of 3 who works from home, my phone is constantly in use between work calls, emails, appointments, and keeping up with my kids. This power bank has been a lifesaver. I love that it magnetically attaches to my phone and charges without me having to search for a cable.The battery lasts a long time, and the built-in cables make it super convenient when I need to charge other devices too. It's easy to throw in my bag when we're running errands or heading to activities.Overall, it's reliable, easy to use, and gives me peace of mind knowing my phone won't die in the middle of a busy day.
 >
-> *Could have been:*
+> *Could have been:* feature_evaluation or personal_story
 >
-> *I chose, because:*
+> *I chose, because:*I chose personal_story, because: It focuses heavily on lifestyle context, personal daily routines, and family utility narrative (personal_story) rather than citing verifiable charging speeds, battery capacity metrics, or voltage specs.
 
 ---
 
@@ -137,15 +162,25 @@ Say so plainly — the disclosure is required, not penalised. -->
 
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
-**Base model:**
+**Base model:** distilbert-base-uncased
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Settings:** <!-- epochs, learning rate, batch size, seed --> 
+EPOCHS = 3
+LEARNING_RATE = 2e-5
+BATCH_SIZE = 16
 
-**Anything I changed from the defaults, and why:**
+**Anything I changed from the defaults, and why:** N/A. Did not change anything.
 
 **Split sizes:** <!-- train / val / test, and per-label counts in the test
 split. If a label had fewer than about 8 in test, say so — it explains a lot
-of next unit's variance. -->
+of next unit's variance. --> label                               
+feature_evaluation     71   16    15
+personal_story         41    9     9
+low_effort             27    6     6
+
+[note] 'low_effort' has only 6 examples in the test split.
+
+A metric computed on that few examples moves a lot between seeds.
 
 
 
@@ -162,15 +197,15 @@ of next unit's variance. -->
 
 **Moment 1**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* Assistance in writing a Python script to take my raw amazon_reviews with many extra columns and convert it to the labels.csv file matched the expected column structure .
+- *What came back:* It truncated the extra rows and filters on my original spreadsheet to match the required rows (post, label, notes)
+- *What I changed:* Ran the script and verified that notes still carried the review title and product category 
 
 **Moment 2**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* An analysis of the scraped review dataset to check for class balance and identify any exact text duplicates.
+- *What came back:* A distribution count showing 200 total posts along with the discovery of 4 exact duplicate review pairs across the dataset.
+- *What I changed:* Dropped the 4 duplicate records down to 196 unique posts to completely prevent data leakage from landing identical samples across different splits.
 
 **Pre-labelling disclosure:**
 
