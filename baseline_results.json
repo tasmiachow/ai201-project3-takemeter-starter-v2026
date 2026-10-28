@@ -1,0 +1,184 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 30,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": true,
+  "scores": {
+    "n": 30,
+    "accuracy": 0.3333333333333333,
+    "f1_macro": 0.27582846003898637,
+    "per_label": {
+      "feature_evaluation": {
+        "precision": 0.25,
+        "recall": 0.06666666666666667,
+        "f1": 0.10526315789473685,
+        "support": 15
+      },
+      "low_effort": {
+        "precision": 0.3333333333333333,
+        "recall": 0.16666666666666666,
+        "f1": 0.2222222222222222,
+        "support": 6
+      },
+      "personal_story": {
+        "precision": 0.34782608695652173,
+        "recall": 0.8888888888888888,
+        "f1": 0.5,
+        "support": 9
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "Fan noise at 2800rpm. Makes a grinding noise at 75% fan speed. AMD drivers have the fan speed set to 100% by default at minimal heat.  I have mine at -35mv and -10 power limit. The card will still boost to 3.1ghz and the Hotspot temp is only 80c. Vram will hit 90c.  I only lost 50mhz and temps went down 5c.  MSI afterburner does not yet fully work with the card right now.  This card compared to my 6800xt in 5120x1440p gets around 40% more frames and the RT performance has also doubled if not more. But RT demanding games still isnt there yet.  Only a 5090 can handle true RT or pathtracing games in 4k.  I paid $729 for my card which is still about 50$ more han what it should of been.  Do not pay $850 for a 9079XT or 5070ti.  That is nearly $200 over priced for a mid-range card.  \n\nThis card is a compact card at the cost of vram temps. It does run a lot cooler than my 6800XT I can say.  Noise levels are higher but you want good ventilation on the sides of your case as this card puts out 330 watts of heat.  With my side panel off my case the card drops another 5c.  Really if you had a fan on the side of the case these newer cards will run much cooler. Or an open case.  There is a 28c delta between the hotspot and gpu temp sensors which isn't good. I believe these early cards need to have thermal paste re-applied to the die. But doing so voids the warranty. I really want to do this with my card. All of the heat is coming from the left side of the card mounted in my pc. Also you need a bigger case for airflow with these 300 watt or higher gpus. I have a 4000D case and it's a glass side panel. You need something with a mesh side panel or vents on the side panel for the airflow of these high wattage cards. I have 5 120mm fans and it's not enough for the heat this card puts out. Taking off my side panel drops temps by 7c. Putting the vram temps from 94 max to 87 max. Having vram temps in the 90s is NOT good and the card will not last long",
+      "gold": "feature_evaluation",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "A very beautiful piece, adds to your home decor instead of taking away from it with the normal tacky shoe racks. If you have small children it will definitely hold double the shoes!",
+      "gold": "personal_story",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "This is definitely the way to go, get the 2TB trust me, it\u2019s loads mentally fast, from the time I hit start on the pc it will load me into windows with in 8 seconds kinda crazy, is it expensive?yes but you are getting what you payed for I have 4 of them in my build",
+      "gold": "personal_story",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "Keyboard is great quality and feels great, I purchased 10 for my staff they all love it. The only reason I didn't give it a full 5 stars is because as the person who did all set up (swapping keys to reflect windows and wiring) I wish they provided a longer USB C wire. Unless your desktop is set up right next to it or in a small desk than the wire is not long enough, yes you can use wireless but can you imagine having to charge 10 keyboards once battery runs out?",
+      "gold": "feature_evaluation",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "There are several things I love about this device. First, I love how compact it is. It easily fits in my purse. I love that I can charge up to 3 devices ALL AT THE SAME TIME. It can also charge a single device several times before you need to charge the charger. The fact that it has a little kickstand is an added bonus so that I can prop it. Overall I am very satisfied with this power bank.",
+      "gold": "feature_evaluation",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "The metal is very thin and once put together will work as indicated. It is very easily bent. The packaging was great and well cushioned. The doors were a little crooked and the magnets could perhaps be a little more powerful to hold closed. Other than that they are aesthetically well designed.",
+      "gold": "feature_evaluation",
+      "predicted": "low_effort"
+    },
+    {
+      "text": "It\u2019s mid. Go for an oled",
+      "gold": "low_effort",
+      "predicted": "low_effort"
+    },
+    {
+      "text": "I had no issue with my previous Samsung 980. I bought a Samsung 990 PRO SSD 4 TB on November 18, 2024 from Amazon. I had no trouble transferring my data from my previous NVME. It worked flawlessly in my PC for about 6 months. Then suddenly it would spontaneously reboot my computer and then fail to be detected so my system would just be sitting on the BIOS screen. It would take a hard shut off and turn on to get it to work again. So I foolishly bought another Samsung 990 PRO SSD 4 TB on July 20, 2025 from Amazon. I had no trouble transferring my data from the previous Samsung 990 PRO SSD 4 TB. The problem then disappeared completely with the new 990 PRO.\n\nNow, two months later with again no changes to my system in any way... the problem is back on the new 990 PRO. I wish I would have read reviews of other people having this exact same problem. The Magician app shows it is failing randomly when the NVME is as cool as 38 degrees centigrade.\n\nI have been in professional IT for 30 years and have never experienced something like this. Either these have a design issue that many other people are experiencing based on reviews or I have been incredibly unlucky.",
+      "gold": "feature_evaluation",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "Super reliable as a mom of two and content creator who's phone is always dead mid-day! It's compatible with lots of different devices - I've used this to charge phones, stroller fans, tablets.. EVERYTHING! The battery is long lasting and I love the screen that shows exactly how much battery you have left.",
+      "gold": "feature_evaluation",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "Amazing keyboard for office use. Bonus points for the aura.",
+      "gold": "low_effort",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "I love how compact and easy to carry this power bank is. It\u2019s convenient to have on hand when I\u2019m out and about and need to keep my phone charged. The matte black design looks sleek and modern, and it\u2019s easy to fit into my everyday routine. Overall, it\u2019s a practical accessory for anyone who needs extra power on the go!",
+      "gold": "personal_story",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "This is a really useful piece for adding extra storage, especially in areas that need better organization.\n\nI am using this inside a closet to create more shelf space, and it works very well for that purpose. It helped turn unused space into something much more functional and organized.\n\nAssembly was fairly easy and straightforward. Everything came in good condition, and once put together it feels reasonably sturdy with good stability for everyday use.\n\nEven though I am using it in a closet, it is very versatile and could easily be used in other areas of the home. It would work well in a bedroom, next to a bed, or in any space where you need additional shelving.\n\nWhat I like:\n\n\nGood stability once assembled\n\nReasonably sturdy for its size and purpose\n\nEasy assembly process\n\nVersatile and fits in many different spaces\n\nGreat for maximizing unused storage areas\n\n\nThings to be aware of:\n\n\nBest suited for light to moderate storage\n\nNot designed for very heavy items\n\n\nOverall:\n\nThis is a practical and versatile storage solution that makes a noticeable difference in how usable a space feels. It is a great option if you are looking to add organization without taking up too much room.",
+      "gold": "feature_evaluation",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "Feels like very sturdy quality. Perfect size for what I needed. It was pretty easy to put together as well, minimal tools required. Worth the money in my opinion.",
+      "gold": "personal_story",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "This power bank saved me during my 17 mile backpacking trip this last weekend. Being off grid with no service was tough but this power bank definitely came in handy. It\u2019s lightweight, love the color, compact, and I love the built in cords. Super convenient and a great gift for anyone!!",
+      "gold": "personal_story",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "This is SUCH a quietly creamy keyboard. It makes me want to type all the time just because of the way it sounds. The colors are adorable too! The mouse also has a quiet click so you\u2019re not annoying your coworkers while you\u2019re constantly clicking.\n100/10 recommend, especially for the low price!",
+      "gold": "personal_story",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "This is the most comfortable and slick feeling keyboard I've had in decades of pc'ing. I mean, it has to \"sharp/softness\" to it that can't be compared to mechanical keys. This is though my first magnetic so maybe that's why I'm all giddy over it. Regardless, I've had some top tier keyboards. I wanted this one because first, looks. I mean, that's real wood on the side. And the keyboard body is itself - HIGH QUALITY. It's a little weighting but I don't care about that because I'm not walking around with my keyboard. It stays placed and won't budge.\n\n\nConnection is pretty simple. It can be wired or wireless. I have had it wired but will be doing wireless soon. I've to do some re-arranging and definitely look forward to getting rid of the cable.\n\n\nPros: Typing that's feels so good you'd not want to stop typing. The magnetism creating the springing touch is excellent. And I like the fact it can be adjusted. The keyboard is of high quality material. You won't feel ripped off at all if you get this keyboard. And the sound is excellent. Not banging or hard noise clicks. The keyboard layout is standard. Though I'm a gamer and editor I'm from the old school. And I still prefer a keypad. The F keys are also standard with functions tied in to them be default. This keyboard is a looker. And it feels so good to type on. It almost enhances one's WPM.\n\n\nCons: I'm maybe spoiled from previous keyboards I've owned. But, I do not like that there is no volume knob. Instead, one has to hold down the \"fn\" (function) key and then whatever function you want to control (i.e. volume). I mean, a knob is quick and easy. Also, this keyboard has RGB. But, the light is very dull. Even when it's maxed out. I'm not expecting the bat signal, but, compared to other keyboards, this max seems like the minimum on other keyboards. I wish it could be more powerful.\n\n\nOverall: I'm VERY happy with this keyboard. There were a few sacrifices feature wise, but absolutely no regrets. I highly recommend it.",
+      "gold": "feature_evaluation",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "Easy to charge and use. I love it!",
+      "gold": "low_effort",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "Came as described, working great !",
+      "gold": "low_effort",
+      "predicted": "feature_evaluation"
+    },
+    {
+      "text": "I\u2019ve been really impressed with this power bank. The magnetic wireless charging makes it super convenient especially when I\u2019m out running errands or traveling and don\u2019t want to deal with extra cords everywhere.\n\nIt\u2019s compact, easy to carry in my bag, and still holds a strong charge. I also like that it charges quickly and feels secure when attached to my phone instead of constantly slipping around like some other portable chargers.\n\nDefinitely a great option if you want something reliable, portable, and easy to use for everyday life.",
+      "gold": "feature_evaluation",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "This is one of the best portable power banks I\u2019ve used. The charging speed is solid, and the wireless function works well without constantly needing to adjust the connection. The magnetic hold is strong and keeps everything aligned while charging.\n\n\nI also like the digital display. It shows the remaining power clearly, which makes it easy to manage usage. Another plus is that it can charge itself while wirelessly charging your phone, which is convenient when you\u2019re short on outlets.\n\n\nThe only downside is that it doesn\u2019t charge an Apple Watch as fast as it does a phone. It still works, just slower by comparison.\n\n\nOverall, very reliable, well designed, and easy to use.",
+      "gold": "feature_evaluation",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "I have used Samsung SSD drives for many years exclusively. They have always been the fastest, most reliable SSD drives you could buy. They were more expensive...but worth it.\n\nThis one...definitely not. It's very fast. However it has a critical design issue that I wish I had known about before I bought it, which makes it very unreliable.\n\nI purchased this drive for a new PC build. It worked great for three months. After that, at random times, the drive began to vanish. It would disappear as if it had been unplugged. If the PC was using it as its system drive (and it was), the PC would crash and reboot to a BIOS screen. Rebooting the PC does not fix it, the PC has to be physically power cycled for the drive to come back up and reappear.\n\nNo data was lost...but it became extremely unreliable, crashing and disappearing more than once a day. I opened a warranty ticket with Samsung, and they replaced it, no questions asked.\n\nTwo months later...the replacement drive they provided is now doing the exact same thing. I now have ANOTHER warranty replacement claim open with Samsung.\n\nI did a search online, and there are MANY people complaining about this problem with the Samsung 990 drive. There is obviously something very wrong with the design of the drive, but this problem is known and widespread.\n\nFor this reason I recommend you do NOT buy this drive.",
+      "gold": "feature_evaluation",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "Amazing gpu a little pricy but best ptp",
+      "gold": "low_effort",
+      "predicted": "feature_evaluation"
+    },
+    {
+      "text": "I get so many compliments at work over my new keyboard!! It's comfortable to use, and adds fun to the everyday workload!!",
+      "gold": "personal_story",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "You get what you pay for with this one. The manufactured wood is pretty solid and it's easy to put together. I didn't add the cardboard back so can't speak to that.\n\nDownsides: the labels on each board don't peel off well. I spent more time scraping off residue than building this. The white stickers to cover the screw holes are thin and too small. They just don't look great.\n\nBut I'm putting this in a closet and so it'll work well for the low price.",
+      "gold": "feature_evaluation",
+      "predicted": "low_effort"
+    },
+    {
+      "text": "Great keyboard for customization.\n\nEspecially, the software just needs a web browser. You don't need to install any software. Great for corporate laptops where you have restrictions.",
+      "gold": "feature_evaluation",
+      "predicted": "personal_story"
+    },
+    {
+      "text": " wanted to love this card. On paper, the performance looked amazing. Reddit said it was \u201cdestroying NVIDIA.\u201d Benchmark videos made it sound like the second coming of PC gaming.\n\nReality?\n\nI spent more time:\n\nuninstalling drivers\ndisabling Windows features\ntweaking power limits\nturning off overlays\nreading Reddit threads\npraying to the shader cache gods\n\n\u2026than actually playing games.\n\nAt one point I had:\n\ndriver-only install\nHAGS disabled\noverlays disabled\nclocks lowered\npower reduced\nthree separate PCIe cables connected\n\nAnd the system still randomly rebooted while sailing around in Windrose like the GPU was allergic to boats.\n\nMeanwhile my old GTX 1080 Ti \u2014 a card old enough to qualify for antique plates \u2014 just sat there quietly doing its job.\n\nThe final straw was swapping in an RTX 5070 OC and instantly getting:\n\nsmoother gameplay\nhigher FPS\nlower heat\nno weird visual glitches\nno random restarts\nno emotional damage\n\nThe 9070 XT may benchmark well in controlled YouTube environments powered by hope and sponsorships, but in my real-world experience it felt like I had volunteered to become part of AMD\u2019s QA department.\n\nReturned.",
+      "gold": "feature_evaluation",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "This makes for an excellent tool, and it\u2019s a great present that would be definitely appreciated by everyone",
+      "gold": "personal_story",
+      "predicted": "feature_evaluation"
+    },
+    {
+      "text": "Great item! I love that it can charge my watch and phone! I just went on a cruise and it saved me from going to my room several times! Perfect for travel! And my friends used it too!",
+      "gold": "personal_story",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "I feel bad when I leave this mouse home. It is addictive",
+      "gold": "low_effort",
+      "predicted": "personal_story"
+    },
+    {
+      "text": "Looks really nice, directions were pretty straight forward. My one negative is that, you need to nail it to the wall so it doesn\u2019t wobble when u open a drawer from the weight of the shoes. And also there no wood to cover the back.",
+      "gold": "feature_evaluation",
+      "predicted": "feature_evaluation"
+    }
+  ]
+}

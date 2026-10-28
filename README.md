@@ -231,6 +231,7 @@ A metric computed on that few examples moves a lot between seeds.
 **What I predicted before I looked:**
 <!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
      prediction made afterwards isn't one. -->
+     I predict our trained model will beat the baseline on recall for personal_story because the model learned our specific boundary for distinguishing casual opinions from structured arguments
 
 **What the gap actually means:**
 <!-- If the baseline matched your trained model, your fine-tuning added
