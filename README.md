@@ -223,10 +223,11 @@ A metric computed on that few examples moves a lot between seeds.
 
 | Measure | Baseline | Trained | Difference |
 |---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| Overall accuracy | 0.333 | 0.500 | +0.167 |
+| Macro F1 | 0.276 | 0.222 | -0.054 |
+| F1 — `feature_evaluation` | 0.105 | 0.667 | +0.561 |
+| F1 — `low_effort` | 0.222 | 0.000 | -0.222 |
+| F1 — `personal_story` | 0.500 | 0.000 | -0.500 |
 
 **What I predicted before I looked:**
 <!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
@@ -237,7 +238,7 @@ A metric computed on that few examples moves a lot between seeds.
 <!-- If the baseline matched your trained model, your fine-tuning added
      nothing — and that is a real finding, not a failure. Say it plainly. -->
 
-
+There are too few examples for a low_effort review in my training set, which is why my fine-tuned model preforms worse than the zero-shot.
 
 ---
 
@@ -248,29 +249,45 @@ A metric computed on that few examples moves a lot between seeds.
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
+| 1.  | Overall Accuracy >= 0.65 | 0.500  | 0.500  | 0.700  | Missed |
+| 2.  | Minority Class (low_effort) Macro F1 => 0.50 | 0.000  | 0.000  | 0.909  | Missed |
+| 3.  | per-label minimum F1 >= 0.6 for Core Classes | 0.000 | 0.000 | 0.200 | Missed |
 | 4.  |  |  |  |  |  |
 | 5.  |  |  |  |  |  |
+
+
+| Measure | Seed 42 | Seed 7 | Seed 2024 | Spread |
+|---|---|---|---|---|
+| Overall accuracy | 0.500 | 0.500 | 0.700 | 0.200 |
+| Macro F1 | 0.222 | 0.227 | 0.626 | 0.404 |
+| F1 — `feature_evaluation` | 0.667 | 0.682 | 0.769 | 0.103 |
+| F1 — `personal_story` | 0.000 | 0.000 | 0.200 | 0.200 |
+| F1 — `low_effort` | 0.000 | 0.000 | 0.909 | 0.909 |
 
 ### Confusion matrix
 
 <!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
      An image of a matrix earns nothing. -->
 
-| true \ predicted |  |  |  |
+| true \ predicted | feature_evaluation | personal_story | low_effort |
 |---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
+| **feature_evaluation** | 15 | 0 | 0 |
+| **personal_story** | 9 | 0 | 0 |
+| **low_effort** | 6 | 0 | 0 |
+
+Biggest confusion: 9 real `personal_story` posts called `feature_evaluation`.
+The other direction: 0 real `feature_evaluation` posts called `personal_story`.
+
+That's lopsided — the model leans toward `feature_evaluation` on this pair.
+A direction like that usually points at your labelling rather than the
+model. Your agreement report is the thing that can tell you which.
 
 **My biggest off-diagonal number, and what it means:**
 <!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
      direction. "7 real analysis posts were called hot_take and only 3 went the
      other way" is a direction, not just an error rate. -->
 
-
+It points to either severe class imbalance in my 200 training examples or that the text patterns in y personal_story posts overlapped too closely with feature_evaluation in the model's eyes.
 
 ---
 

@@ -51,7 +51,7 @@ whether you hit them:
 
 ---
 
-## 1. Overall Accuracy $\ge 0.65$
+## 1. Overall Accuracy >= 0.65
 
 <!-- Your criterion. It must name a number. -->
 
