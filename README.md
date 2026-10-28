@@ -327,7 +327,13 @@ It points to either severe class imbalance in my 200 training examples or that t
      data/staff_taxonomy.md, not your own — so every argument below is made
      from those definitions and those decision rules. -->
 
-**Agreement rate:** ___ / 30 = ___%
+| Post | Staff said | I said | My call, and why |
+|---|---|---|---|
+| Carbon plates aren't the whole story. My times dropped 2% in the shoe… | `analysis` | `reaction` |  |
+| Ran the same loop in 4C and in 24C within a fortnight, same effort by… | `analysis` | `reaction` |  |
+| Three of us ran the same session on the same day, different shoes, wi… | `analysis` | `reaction` |  |
+
+**Agreement rate:** 27 / 30 = 90%
 
 <!-- Nobody grades this number. A 60% who argues every disagreement from the
      stated rules beats a 95% who wrote "staff was right" nine times. Several
